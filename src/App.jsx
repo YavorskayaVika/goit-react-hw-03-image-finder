@@ -50,9 +50,7 @@ export  class App extends Component {
       }
     }
   }
-  onLoadMore = () => {
-    const { page, maxImg } = this.state;
-     
+  onLoadMore = () => {     
       this.setState(prev => ({ page: prev.page + 1 }));
     }
   
