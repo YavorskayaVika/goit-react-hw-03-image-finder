@@ -1,11 +1,11 @@
 import { StyledApp } from 'App.styled';
-import { ImageGallery } from './ImageGallery/ImageGallery';
-import { Loader } from './Loader/Loader';
-import { Button } from './Button/Button';
+import { ImageGallery } from './components/ImageGallery/ImageGallery';
+import { Loader } from './components/Loader/Loader';
+import { Button } from './components/Button/Button';
 import React, { Component } from 'react';
 import { getGallery } from './Pixabay/PixabayAPI';
-import Searchbar from './Searchbar/Searchbar';
-import Modal from './Modal/Modal';
+import Searchbar from './components/Searchbar/Searchbar';
+import Modal from './components/Modal/Modal';
 
 export  class App extends Component {
   state = {
@@ -52,10 +52,10 @@ export  class App extends Component {
   }
   onLoadMore = () => {
     const { page, maxImg } = this.state;
-    if (page < maxImg) {
+     
       this.setState(prev => ({ page: prev.page + 1 }));
     }
-  };
+  
   handleOpenModal = img => {
     this.setState(prev => ({ isOpen: !prev.isOpen, currentImg: img }));
   };
