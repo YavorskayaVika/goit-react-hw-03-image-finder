@@ -58,7 +58,7 @@ export  class App extends Component {
     this.setState(prev => ({ isOpen: !prev.isOpen, currentImg: img }));
   };
   handleChangeQuery = str => {
-    this.setState({ q: str, gallery: [] });
+    this.setState({ q: str, gallery: [], page: 1 });
   };
   closeModal = () => {
     this.setState({ isOpen: false });
